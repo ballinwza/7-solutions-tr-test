@@ -1,16 +1,18 @@
 import { FC } from 'react'
-import CardItem from '../item/CardItem'
-import { CustomCardList } from './CardList.style'
-import { IUser } from '@/modules/users/domain/user.model'
 
-const { Container } = CustomCardList
+import { CustomVegetableList } from './List.style'
+
+import { IVegetable } from '@/modules/vegetable/domain/model/vegetable.model'
+import CardItem from '../../coreUi/card/CardItem'
+
+const { Container } = CustomVegetableList
 
 interface Props {
-    itemList: IUser[]
-    addItemIntoTable: (item: IUser) => void
+    itemList: IVegetable[]
+    addItemIntoTable: (item: IVegetable) => void
 }
 
-const CardList: FC<Props> = ({ itemList, addItemIntoTable }: Props) => {
+const VegetableList: FC<Props> = ({ itemList, addItemIntoTable }: Props) => {
     return (
         <Container>
             {itemList &&
@@ -26,4 +28,4 @@ const CardList: FC<Props> = ({ itemList, addItemIntoTable }: Props) => {
     )
 }
 
-export default CardList
+export default VegetableList

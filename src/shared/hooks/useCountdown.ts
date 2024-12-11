@@ -23,7 +23,6 @@ const useCountdown = (initialSeconds: number) => {
         return () => {
             if (timerId) {
                 clearInterval(timerId) // Cleanup timer
-                console.log('time up')
                 reset()
             }
         }
@@ -42,7 +41,13 @@ const useCountdown = (initialSeconds: number) => {
         setIsRunning(false)
     }, [])
 
-    return { remainingTime, isRunning, start, reset, stop }
+    const resetThenStart = useCallback(() => {
+        setIsRunning(false)
+        setRemainingTime(initialSeconds)
+        setIsRunning(true)
+    }, [initialSeconds])
+
+    return { remainingTime, isRunning, start, reset, stop, resetThenStart }
 }
 
 export default useCountdown

@@ -1,5 +1,5 @@
-import HomeProvider from '@/sections/providers/Home.provider'
+import VegetableProvider from '@/sections/providers/Vegetable.provider'
 
 export default function Home() {
-    return <HomeProvider />
+    return <VegetableProvider />
 }

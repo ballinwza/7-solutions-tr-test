@@ -1,17 +1,18 @@
 import { FC } from 'react'
-import { CustomGroupTable } from './Table.style'
+import { CustomVegetableTable } from './Table.style'
 import { capitalize } from 'radash'
-import { IUser } from '@/modules/users/domain/user.model'
-import CardItem from '../card/item/CardItem'
 
-const { Container, Header, Body } = CustomGroupTable
+import { IVegetable } from '@/modules/vegetable/domain/model/vegetable.model'
+import CardItem from '../../coreUi/card/CardItem'
+
+const { Container, Header, Body } = CustomVegetableTable
 
 interface Props {
     title: string
-    itemList: IUser[]
-    onClick: (value: IUser) => void
+    itemList: IVegetable[]
+    onClick: (value: IVegetable) => void
 }
-const Table: FC<Props> = ({ title, itemList, onClick }: Props) => {
+const VegetableTable: FC<Props> = ({ title, itemList, onClick }: Props) => {
     return (
         <Container>
             <Header>{capitalize(title)}</Header>
@@ -27,4 +28,4 @@ const Table: FC<Props> = ({ title, itemList, onClick }: Props) => {
     )
 }
 
-export default Table
+export default VegetableTable
