@@ -1,10 +1,12 @@
 import { VegetableType } from '../types/vegetable.type'
 
-export const mapVegetableType = (type: string): VegetableType => {
+export const mapVegetableTypeFromStringToDomain = (
+    type: string,
+): VegetableType | undefined => {
     switch (type) {
         case 'Fruit':
             return VegetableType.fruit
-        default:
+        case 'Vegetable':
             return VegetableType.vegetable
     }
 }
