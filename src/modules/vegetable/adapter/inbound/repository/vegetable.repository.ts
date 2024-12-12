@@ -13,7 +13,7 @@ export class VegetableRepositoryImpl implements IVegetableRepository {
             return afterMapping
         } catch (err) {
             console.error('Error VegetableRepositoryImpl : ', err)
-            return err
+            throw err
         }
     }
 }
