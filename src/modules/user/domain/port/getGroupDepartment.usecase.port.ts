@@ -1,10 +1,10 @@
 import { IGroupUserByDepartment } from '../model/user.model'
 
-export interface IGetAllUserUsecase {
-    handle: () => IGetAllUserUsecase.output
+export interface IGetGroupDepartmentUsecase {
+    handle: () => IGetGroupDepartmentUsecase.output
 }
 
-export namespace IGetAllUserUsecase {
+export namespace IGetGroupDepartmentUsecase {
     export type output = Promise<{
         [department: string]: IGroupUserByDepartment
     }>

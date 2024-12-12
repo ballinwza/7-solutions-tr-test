@@ -1,7 +1,7 @@
 import { IGroupUserByDepartment } from '@/modules/user/domain/model/user.model'
 import { create } from 'zustand'
 import { UserRepositoryImpl } from '../../inbound/repository/user.repository'
-import { GetAllUserUsecase } from '@/modules/user/application/usecase/getAllUser.usecase'
+import { GetGroupDepartmentUsecase } from '@/modules/user/application/usecase/getGroupDepartment.usecase'
 
 interface userState {
     userList: { [department: string]: IGroupUserByDepartment }
@@ -11,7 +11,7 @@ export const userStore = create<userState>((set) => ({
     userList: {},
     fetchAllUser: async () => {
         const userRepo = new UserRepositoryImpl()
-        const getAllUserUsecase = new GetAllUserUsecase(userRepo)
+        const getAllUserUsecase = new GetGroupDepartmentUsecase(userRepo)
 
         const userList = await getAllUserUsecase.handle()
 

@@ -1,14 +1,14 @@
 import { MapDepartmentFromStringToDomainType } from '@/shared/helpers/mapDepartment.help'
 import { IGroupUserByDepartment } from '../../domain/model/user.model'
-import { IGetAllUserUsecase } from '../../domain/port/getAllUser.usecase.port'
+import { IGetGroupDepartmentUsecase } from '../../domain/port/getGroupDepartment.usecase.port'
 import { IUserRepository } from '../port/user.repository.port'
 
 import { capitalize } from 'radash'
 
-export class GetAllUserUsecase implements IGetAllUserUsecase {
+export class GetGroupDepartmentUsecase implements IGetGroupDepartmentUsecase {
     constructor(private readonly repo: IUserRepository) {}
 
-    async handle(): IGetAllUserUsecase.output {
+    async handle(): IGetGroupDepartmentUsecase.output {
         const result = await this.repo.getAllUser()
 
         const department: {
