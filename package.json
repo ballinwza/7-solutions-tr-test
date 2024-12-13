@@ -13,13 +13,15 @@
         "format": "pnpm exec prettier . --write",
         "prepare": "husky",
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "deploy": "pnpm run build && firebase deploy --only hosting"
     },
     "dependencies": {
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.0",
         "axios": "^1.7.9",
         "builder-pattern": "^2.2.0",
+        "firebase": "^11.1.0",
         "next": "15.0.4",
         "radash": "^12.1.0",
         "react": "^19.0.0",
