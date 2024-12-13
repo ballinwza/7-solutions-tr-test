@@ -1,14 +1,11 @@
 import { FC, ReactNode } from 'react'
-import { CustomVegetableLayout } from './Layout.style'
 
 interface Props {
     children: ReactNode
 }
 
-const { Container } = CustomVegetableLayout
-
 const VegetableLayout: FC<Props> = ({ children }: Props) => {
-    return <Container>{children}</Container>
+    return <div className="grid grid-cols-3 gap-10 px-8 pb-8">{children}</div>
 }
 
 export default VegetableLayout
