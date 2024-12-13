@@ -58,18 +58,17 @@ const VegetableProvider: FC = () => {
                 itemList={defaultVegetable}
                 addItemIntoTable={addByClick}
             />
-            <div className="flex flex-row">
-                <VegetableTable
-                    title="fruit"
-                    itemList={fruitList}
-                    onClick={removeByClick}
-                />
-                <VegetableTable
-                    title="vegatable"
-                    itemList={vegetableList}
-                    onClick={removeByClick}
-                />
-            </div>
+
+            <VegetableTable
+                title="fruit"
+                itemList={fruitList}
+                onClick={removeByClick}
+            />
+            <VegetableTable
+                title="vegatable"
+                itemList={vegetableList}
+                onClick={removeByClick}
+            />
         </VegetableLayout>
     )
 }
