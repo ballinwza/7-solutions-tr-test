@@ -13,7 +13,8 @@
         "format": "pnpm exec prettier . --write",
         "prepare": "husky",
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "deploy": "firebase deploy"
     },
     "dependencies": {
         "@emotion/react": "^11.14.0",
