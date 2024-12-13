@@ -18,6 +18,7 @@ const VegetableProvider: FC = () => {
         removeVegetableFromTableByTime,
         orderVegetable,
     } = vegetableStore((state) => state)
+
     const { remainingTime, isRunning, start, resetThenStart, reset } =
         useCountdown(5)
 

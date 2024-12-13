@@ -12,5 +12,13 @@ export const CustomVegetableTable = {
     `,
     Body: styled.div`
         background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > button {
+            max-width: 90%;
+            margin: 6px 0;
+        }
     `,
 }
